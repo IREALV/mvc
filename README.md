@@ -1,9 +1,5 @@
 # MVC Project Template - using NodeJS, Express, Sequelize and MySQL
-Created for educational purposes for the 5A group of Software Engineering, at UNIPOLI Dgo, for the Client-Server course.
-
-Sure! Here are some detailed instructions to clone and install your Node.js project. You can add these to your README file:
-
----
+Created for educational purposes for the fifth-degree groups of Software Engineering, at UNIPOLI Dgo, for the Client-Server course.
 
 ## Getting Started
 
@@ -23,7 +19,7 @@ Ensure you have the following installed on your machine:
     Clone the project repository to your local machine using the following command:
 
     ```bash
-    git clone https://github.com/jlbautista/mvc_5a.git
+    git clone https://github.com/jlbautista/mvc.git
     ```
 
 2. **Navigate to the project directory**
@@ -31,7 +27,7 @@ Ensure you have the following installed on your machine:
     Change the directory to the project folder:
 
     ```bash
-    cd your-repository
+    cd mvc
     ```
 
 3. **Install dependencies**
@@ -73,10 +69,12 @@ Here are some additional npm scripts you might find useful:
 If there are any environment variables required for your project, make sure to set them up. You can create a `.env` file in the root of the project directory and add your variables there. For example:
 
 ```
-API_KEY=your_api_key
-DB_HOST=your_database_host
-DB_USER=your_database_user
-DB_PASS=your_database_password
+PORT = 3001
+
+DB_HOST = localhost
+DB_USER = your_db_user
+DB_PASS = your_db_user_password
+DB_NAME = your_database
 ```
 
 ### Troubleshooting
