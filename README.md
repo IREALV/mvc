@@ -1,4 +1,4 @@
-# mvc_5a
+# MVC Project Template - using NodeJS, Express, Sequelize and MySQL
 Created for educational purposes for the 5A group of Software Engineering, at UNIPOLI Dgo, for the Client-Server course.
 
 Sure! Here are some detailed instructions to clone and install your Node.js project. You can add these to your README file:
