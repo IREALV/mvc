@@ -79,77 +79,77 @@ DB_NAME = your_database
 
 ### Database creation and configuration
 
-- **Connect to MySQL as Root User**
+1. **Connect to MySQL as Root User**
 
-Use the following command to connect:
+    Use the following command to connect:
 
-```
-mysql -u root -p
-````
+    ```
+    mysql -u root -p
+    ````
 
-Enter the root password when prompted.
+    Enter the root password when prompted.
 
-- **Create a New Database**
+2. **Create a New Database**
 
-Inside the MySQL CLI, run:
+    Inside the MySQL CLI, run:
 
-```
-CREATE DATABASE my_database;
-````
+    ```
+    CREATE DATABASE my_database;
+    ````
 
-- **Create a New User**
+3. **Create a New User**
 
-Replace your_password with a strong password:
+    Replace your_password with a strong password:
 
-```
-CREATE USER 'new_user'@'localhost' IDENTIFIED BY 'your_password';
-```
+    ```
+    CREATE USER 'new_user'@'localhost' IDENTIFIED BY 'your_password';
+    ```
 
-- **Grant all privileges on the new database:**
+4. **Grant all privileges on the new database:**
 
-```
-GRANT ALL PRIVILEGES ON my_database.* TO 'new_user'@'localhost';
-FLUSH PRIVILEGES;
-```
+    ```
+    GRANT ALL PRIVILEGES ON my_database.* TO 'new_user'@'localhost';
+    FLUSH PRIVILEGES;
+    ```
 
-- **Connect Using the New User**
+5. **Connect Using the New User**
 
-Exit MySQL CLI:
+    Exit MySQL CLI:
 
-```
-EXIT;
-```
+    ```
+    exit;
+    ```
 
-Now, log in with the new user:
+    Now, log in with the new user:
 
-```
-mysql -u new_user -p my_database
-```
+    ```
+    mysql -u new_user -p my_database
+    ```
 
-Enter the password when prompted.
+    Enter the password when prompted.
 
-- **Create the users Table**
+6. **Create the users Table**
 
-Inside the MySQL CLI, run:
+    Inside the MySQL CLI, run:
 
-```
-CREATE TABLE users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    email VARCHAR(255) UNIQUE NOT NULL,
-    password VARCHAR(255) NOT NULL,
-    createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-);
-```
+    ```
+    CREATE TABLE users (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        name VARCHAR(255) NOT NULL,
+        email VARCHAR(255) UNIQUE NOT NULL,
+        password VARCHAR(255) NOT NULL,
+        createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    );
+    ```
 
-- **Verify Table Creation**
+7. **Verify Table Creation**
 
-Run the following to check the table structure:
+    Run the following to check the table structure:
 
-```
-DESCRIBE users;
-```
+    ```
+    DESCRIBE users;
+    ```
 
 ### Troubleshooting
 
