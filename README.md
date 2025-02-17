@@ -89,7 +89,7 @@ mysql -u root -p
 
 Enter the root password when prompted.
 
-- ** Create a New Database**
+- **Create a New Database**
 
 Inside the MySQL CLI, run:
 
@@ -97,7 +97,7 @@ Inside the MySQL CLI, run:
 CREATE DATABASE my_database;
 ````
 
-- ** Create a New User **
+- **Create a New User**
 
 Replace your_password with a strong password:
 
@@ -105,7 +105,7 @@ Replace your_password with a strong password:
 CREATE USER 'new_user'@'localhost' IDENTIFIED BY 'your_password';
 ```
 
-- ** Grant all privileges on the new database: **
+- **Grant all privileges on the new database:**
 
 ```
 GRANT ALL PRIVILEGES ON my_database.* TO 'new_user'@'localhost';
