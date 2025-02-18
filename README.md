@@ -77,6 +77,80 @@ DB_PASS = your_db_user_password
 DB_NAME = your_database
 ```
 
+### Database creation and configuration
+
+1. **Connect to MySQL as Root User**
+
+    Use the following command to connect:
+
+    ```
+    mysql -u root -p
+    ````
+
+    Enter the root password when prompted.
+
+2. **Create a New Database**
+
+    Inside the MySQL CLI, run:
+
+    ```
+    CREATE DATABASE my_database;
+    ````
+
+3. **Create a New User**
+
+    Replace your_password with a strong password:
+
+    ```
+    CREATE USER 'new_user'@'localhost' IDENTIFIED BY 'your_password';
+    ```
+
+4. **Grant all privileges on the new database:**
+
+    ```
+    GRANT ALL PRIVILEGES ON my_database.* TO 'new_user'@'localhost';
+    FLUSH PRIVILEGES;
+    ```
+
+5. **Connect Using the New User**
+
+    Exit MySQL CLI:
+
+    ```
+    exit;
+    ```
+
+    Now, log in with the new user:
+
+    ```
+    mysql -u new_user -p my_database
+    ```
+
+    Enter the password when prompted.
+
+6. **Create the users Table**
+
+    Inside the MySQL CLI, run:
+
+    ```
+    CREATE TABLE users (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        name VARCHAR(255) NOT NULL,
+        email VARCHAR(255) UNIQUE NOT NULL,
+        password VARCHAR(255) NOT NULL,
+        createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    );
+    ```
+
+7. **Verify Table Creation**
+
+    Run the following to check the table structure:
+
+    ```
+    DESCRIBE users;
+    ```
+
 ### Troubleshooting
 
 If you encounter any issues during installation or running the project, refer to the [Issues](https://github.com/jlbautista/mvc_5a/issues) section on GitHub for solutions or to report a new issue.
