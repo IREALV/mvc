@@ -45,5 +45,13 @@ describe("User API", () => {
     expect(response.status).toBe(400); // Bad request
   });
 
-  
+  // Get all users
+  it("should return an array of users", async () => {
+    const response = await request(app)
+      .get("/api/users");
+
+    expect(response.status).toBe(200);
+    expect(response.body).toBeInstanceOf(Array);
+  });
+
 });
